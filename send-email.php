@@ -1,8 +1,10 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
 header("Access-Control-Allow-Origin: *");
 
 require 'path/to/PHPMailer/src/Exception.php';
@@ -29,21 +31,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host = 'smtp.gmail.com'; // Gmail SMTP server
         $mail->SMTPAuth = true;
         $mail->Username = 'fareenaakram18@gmail.com'; // Your Gmail address
-        $mail->Password = '231erEER!'; // Your Gmail password or app-specific password
+        $mail->Password = 'xxlw puow wiga dqmo'; // Your app-specific password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
         // Email settings
-        $mail->setFrom('fareenaakram18@gmail.com', 'Your Name');
-        $mail->addAddress('fareenaakram18@gmail.com'); // Recipient (your Gmail)
-        $mail->isHTML(true);
+        $mail->setFrom('fareenaakram18@gmail.com', $name);
+        $mail->addAddress($email); // Recipient's email
+
+        $mail->isHTML(true); // Set email format to HTML
         $mail->Subject = $subject;
-        $mail->Body    = "Name: $name<br>Email: $email<br>Message: $message";
+        $mail->Body = $message;
 
         $mail->send();
-        echo 'Message Sent Successfully';
+        echo 'Message has been sent';
     } catch (Exception $e) {
-        echo 'Message Sending Failed. Mailer Error: ' . $mail->ErrorInfo;
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
-?>
