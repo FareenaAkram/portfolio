@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fareena Akram - Web Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+    <link href="style.scss" rel="stylesheet">
+    <link href="style(1).css" rel="stylesheet">
+    <link href="all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link href="themify-icons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="magnific-popup.css" rel="stylesheet">
+    <link src="send-email.php">
+   <script src="portfolio.js"></script>
+   <script src="typed.js"></script>
+   <!-- <script src="animation.js"></script>  -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<style>
+   .grid-item {
+   /*   opacity: 0; Start hidden for animation */
+      transform: translateY(50px); /* Start slightly down for entrance animation */
+      transition: opacity 0.3s ease, transform 0.3s ease;
+         will-change: opacity, transform; /* Specify the properties that will change */
+     
+  }
+  .portfolio-box-01 {
+      position: relative;
+      overflow: hidden;
+  }
+  .portfolio-img img {
+      width: 100%; /* Ensure responsive images */
+      height: auto;
+  }
+  .hero {
+   position: relative;
+}
+.about-me .img {
+   perspective: 1200px; /* Adds depth for the 3D effect */
+}
+.about-me .img-in {
+   transform-style: preserve-3d; /* Ensures the child elements are in 3D space */
+}
+.about-me .img-in img {
+   display: block; /* Ensure the image displays correctly */
+   transition: transform 0.3s ease; /* Smooth transition for non-GSAP animations */
+   will-change: transform; /* Hint to the browser for optimization */
+}
+</style>
+
+   </head>
+    
+  <body class="theme-light">
+   <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <div >
+       <div class="mob-header">
+          <div class="d-flex">
+             <div class="navbar-brand">
+                <a class="logo-text" href="/">Fareena</a>
+             </div>
+             <button class="toggler-menu "><span></span><span></span><span></span></button>
+          </div>
+       </div>
+       <header class="header-left ">
+          <div class="scroll-bar">
+             <div class="hl-top">
+                <div class="hl-logo">
+                   <div class="img"><img src="fareena-photo.png" title="" alt="">
+                   </div>
+                   <h5>Fareena</h5>
+                   <div class="text-container" id="textElement"></div>
+                </div>
+             </div>
+             <ul class="nav nav-menu" id="pp-menu">
+                <li data-menuanchor="home" class="nav-item" ><a class="nav-link" href="#home"><i class="ti-home"></i><span>Home</span></a></li>
+                <li data-menuanchor="about" class="nav-item" >
+                   <a class="nav-link" href="#about">
+                   <i class="ti-id-badge"></i><span>About Me</span></a>
+                </li>
+                <li data-menuanchor="services" class="nav-item" ><a class="nav-link" href="#services"><i class="ti-panel"></i><span>Services</span></a></li>
+                <li data-menuanchor="work" class="nav-item" ><a class="nav-link" href="#work"><i class="ti-bookmark-alt"></i><span>Portfolio</span></a></li>
+            
+                <li data-menuanchor="contactus" class="nav-item" ><a class="nav-link" href="#contactus"><i class="ti-map-alt"></i><span>Contact Me</span></a></li>
+             </ul>
+          </div>
+          <div class="nav justify-content-center social-icons">
+            <a href="https://www.linkedin.com/in/fareena-akram-94a75b128/" target="_blank" class="text-decoration-none"><i class="ti-linkedin"></i></a>
+         </div>
+       </header>
+       
+       <main class="main-left pp-main-section" >
+          <section id="home" data-nav-tooltip="Home" class="pp-section pp-scrollable section pb-0">
+             <div class="home-banner">
+                <div class="container">
+                   <div class="row full-screen align-items-center">
+                      <div class="col-lg-6">
+                         <div class="type-box">
+                            <h6>Hello, I am</h6>
+                            <h1 class="font-alt">Fareena Akram</h1>
+                            <p class="lead">I am a Passionate <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                            
+                            <p class="desc">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores.</p>
+                            <div class="btn-bar"><a class="px-btn px-btn-theme" href="#contactus">Contact Me</a></div>
+                         </div>
+                      </div>
+                      <div class="col-lg-6">
+                         <div class="hb-img"><video width="400" height="auto" autoplay muted >
+                           <source src="farrena.mp4" type="video/mp4"></div>
+                      </div>
+                     
+                   </div>
+                </div>
+             </div>
+          </section>
+      
+            <section id="about" data-nav-tooltip="About" class="pp-section pp-scrollable  counter" >
+               <div class="container">
+                  <div class="row align-items-center justify-content-center section">
+                     <div class="col-lg-5 m-15px-tb right-column">
+                        <div class="about-me">
+                           <div class="img">
+                              <div class="img-in"><img src="Photo-collage.png" title="" alt="" style="max-width: 406px;"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-7 m-15px-tb">
+                        <div class="about-info">
+                           <div class="title">
+                              <h3>About me.</h3>
+                           </div>
+                           <div class="about-text">
+                              <h3>
+                                 I'm<!-- --> a Front-end Developer with over 3 years of experience.<!-- --> 
+                              </h3>
+                              <p>
+                                I am a Frontend Engineer with expertise in HTML, CSS, Bootstrap, Angular, and WordPress, focused on developing responsive, user-friendly web interfaces. I am from Pakistan and I have experience in leading Angular application development, integrating Material UI, and maintaining websites to enhance marketing and lead generation efforts. With a strong eye for design and proficiency in tools like Adobe Photoshop and Figma, I combine creativity with technical skill to deliver modern, optimized web solutions. I am passionate about learning new technologies and continuously improving my craft to meet the evolving demands of web development.
+                              </p>
+                           
+                             
+                              <div class="btn-bar"><a class="px-btn px-btn-theme" href="#contactus"><span>Contact Me</span></a><a class="px-btn px-btn-theme" href="#work"><span>Portfolio</span></a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="separated"></div>
+                  <div class="section">
+                  <div class="title">
+                     <h3>Education &amp; Skills</h3>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-4 m-15px-tb">
+                        <ul class="aducation-box">
+                           <li>
+                              <span>20195-2022</span>
+                              <h6>Bachelors</h6>
+                              <p>Lahore College for Women University, Lahore</p>
+                           </li>
+                           <li>
+                              <span>2019-2022</span>
+                              <h6>Masters</h6>
+                              <p>Lahore College for Women University, Lahore</p>
+                           </li>
+                           
+                        </ul>
+                     </div>
+                     <div class="col-lg-7 ml-auto m-15px-tb">
+                        <div class="skills-box">
+                           <h3>My skills</h3>
+                           <p>
+                             My expertise spans across various technologies and frameworks, allowing me to deliver high-quality solutions and continually enhance my skill set. I am proficient in leveraging modern tools and methodologies to solve complex problems and contribute to innovative projects.
+                           </p>
+                           <div class="skill-lt">
+                             <h6>HTML5</h6>
+                             <div class="skill-bar">
+                                 <div class="skill-bar-in" data-width="92%"><span data-toggle="tooltip" title="92%"><span class="value">92%</span></span></div>
+                             </div>
+                         </div>
+                         <div class="skill-lt">
+                             <h6>JavaScript</h6>
+                             <div class="skill-bar">
+                                 <div class="skill-bar-in" data-width="72%"><span data-toggle="tooltip" title="72%"><span class="value">72</span></span></div>
+                             </div>
+                         </div>
+                         <div class="skill-lt">
+                             <h6>Wordpress</h6>
+                             <div class="skill-bar">
+                                 <div class="skill-bar-in" data-width="78%"><span data-toggle="tooltip" title="86%"><span class="value">78%</span></span></div>
+                             </div>
+                         </div>
+                         <div class="skill-lt">
+                             <h6>Angular</h6>
+                             <div class="skill-bar">
+                                 <div class="skill-bar-in" data-width="88%"><span data-toggle="tooltip" title="88%"><span class="value">88%</span></span></div>
+                             </div>
+                         </div>
+                         <div class="skill-lt">
+                          <h6>Bootstrap</h6>
+                          <div class="skill-bar">
+                              <div class="skill-bar-in" data-width="92%"><span data-toggle="tooltip" title="88%"><span class="value">92%</span></span></div>
+                          </div>
+                      </div>
+                      <div class="skill-lt">
+                       <h6>TypeScript</h6>
+                       <div class="skill-bar">
+                           <div class="skill-bar-in" data-width="75%"><span data-toggle="tooltip" title="88%"><span class="value">75%</span></span></div>
+                       </div>
+                   </div>
+                   <div class="skill-lt">
+                    <h6>SASS</h6>
+                    <div class="skill-bar">
+                        <div class="skill-bar-in" data-width="80%"><span data-toggle="tooltip" title="88%"><span class="value">80%</span></span></div>
+                    </div>
+                </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="separated"></div>
+                  <div class="section">
+                 
+                  <div class="title">
+                     <h3>Experience.</h3>
+                  </div>
+                  <div class="resume-box position-relative">
+                     <div class="resume-row position-relative">
+                        <div class="row">
+                           <div class="col-sm-3 col-md-3 col-xl-2">
+                              <div class="rb-left d-flex align-items-center pe-2"><img src="curemd_logo.jpeg" title="" alt=""></div>
+                           </div>
+                           <div class="col-sm-9 col-md-9 col-xl-10">
+                             <div class="rb-right">
+                                <h6>Web Developer</h6>
+                                <label>CureMD | Onsite | July 2023 - Present</label>
+                                <div class="rb-time">Full Time</div>
+                                <p>
+                                   <strong>Project Leadership:</strong> <br>
+                                   Led the transformation of CureMD’s website to Angular 17, enhancing performance and integrating Firebase for robust data management and CRUD operations.
+                                </p>
+                                <p>
+                                   <strong>Feature Development:</strong> <br>
+                                   Developed and maintained high-quality, SEO-optimized web pages using HTML, CSS, Bootstrap, Angular, React, Material UI, and TypeScript.
+                                   
+                                </p>
+                                <p>
+                                   <strong>Collaboration:</strong> <br>Worked closely with the SEO team to implement content changes and optimize the website for search engines using tools like Google PageSpeed and Ahrefs.
+                                </p>
+                                <p>
+                                   <strong>User Experience:</strong> <br>
+                                    Created and maintained user interfaces for CureMD applications in line with the design system, focusing on improving user experience and engagement.
+                                </p>
+                                
+                             </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="resume-row position-relative">
+                        <div class="row">
+                           <div class="col-sm-3 col-md-3 col-xl-2">
+                              <div class="rb-left d-flex align-items-center pe-2"><img src="devbunch-logo.svg" title="" alt=""></div>
+                           </div>
+                           <div class="col-sm-9 col-md-9 col-xl-10">
+                              <div class="rb-right">
+                                
+                                 <h6>Front-end Developer</h6>
+                                 <label>Devbunch Private Limited | Onsite | Jan 2022 - June 2023</label>
+                                 <div class="rb-time">Full Time</div>
+                                 <p><strong>Template Development:</strong> <br>Designed and developed high-quality WordPress Elementor template kits and themes, available on ThemeForest.</p>
+                                 <p><strong>Custom Solutions:</strong> <br>Implemented custom WordPress solutions to meet specific client requirements, ensuring compatibility and responsiveness across devices.</p>
+                              </div>
+                              
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </div>
+            </section>
+            <section id="services" data-nav-tooltip="Services" class="pp-section pp-scrollable section" >
+               <div class="container">
+                  <div class="title">
+                     <h3 class="js-title">What I do?</h3>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-6 m-15px-tb">
+                        <div class="feature-box-01 d-flex overflow-hidden h-100">
+                          <div class="ag-courses-item_bg"></div>
+                           <i class="icon theme-bg icon-mobile"></i>
+                           <div class="feature-content media-body">
+                             
+                              <h5>Custom Web Development</h5>
+                              <p>Crafting tailor-made web solutions to meet your unique business needs. Utilizing the latest technologies such as HTML, CSS, Bootstrap, Material UI, Angular, React, and TypeScript, I deliver high-performance, scalable, and user-friendly websites that enhance your online presence.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 m-15px-tb">
+                        <div class="feature-box-01 d-flex h-100">
+                          <div class="ag-courses-item_bg"></div>
+                           <i class="icon theme-bg icon-desktop"></i>
+                           <div class="feature-content media-body">
+                              <h5>WordPress Development</h5>
+                              <p>Designing and developing custom WordPress themes and templates using Elementor. I provide comprehensive WordPress solutions including theme customization, plugin integration, and performance optimization to ensure your website stands out.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 m-15px-tb">
+                        <div class="feature-box-01 d-flex h-100">
+                          <div class="ag-courses-item_bg"></div>
+                           <i class="icon theme-bg icon-target"></i>
+                           <div class="feature-content media-body">
+                              <h5> Angular & React Development</h5>
+                              <p>Building robust and scalable applications using Angular and React. My expertise includes developing single-page applications (SPAs) and integrating complex functionalities to provide users with a smooth and responsive experience.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 m-15px-tb">
+                        <div class="feature-box-01 d-flex h-100">
+                          <div class="ag-courses-item_bg"></div>
+                           <i class="icon theme-bg icon-mobile"></i>
+                           <div class="feature-content media-body">
+                              <h5>SEO Optimization</h5>
+                              <p>Improving your website’s visibility and search engine ranking through strategic SEO practices. From on-page SEO to technical improvements, I ensure your site is optimized for better performance and higher search engine visibility.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6 m-15px-tb">
+                        <div class="feature-box-01 d-flex h-100">
+                          <div class="ag-courses-item_bg"></div>
+                           <i class="icon theme-bg icon-desktop"></i>
+                           <div class="feature-content media-body">
+                              <h5>Web Performance Optimization</h5>
+                              <p>Enhancing the speed and performance of your website through advanced techniques and tools. I focus on reducing load times, optimizing assets, and ensuring that your website performs optimally across all devices.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- <div class="col-sm-6 m-15px-tb">
+                        <div class="feature-box-01 d-flex">
+                          <div class="ag-courses-item_bg"></div>
+                           <i class="icon theme-bg icon-target"></i>
+                           <div class="feature-content media-body">
+                              <h5>SEO Marketing</h5>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                           </div>
+                        </div>
+                     </div> -->
+                  </div>
+                  <div class="separated"></div>
+               </div>
+            </section>
+            <section id="work" data-nav-tooltip="Work" class="pp-section pp-scrollable section dark-bg section" >
+               <div class="container">
+                  <div class="title">
+                     <h3>My Portfolio.</h3>
+                  </div>
+                  <div class="portfolio-filter-01 filters filter-button-group" >
+                     <ul class="filter nav">
+                        <li class="c-pointer active" data-filter="*">All</li>
+                        <li class="c-pointer " data-filter="elementor">Elementor Kit</li>
+                        <li class="c-pointer " data-filter="wordpress">Wordpress</li>
+                        <li class="c-pointer " data-filter="html">HTML Website</li>
+                     </ul>
+                  </div>
+                  <div class="img-gallery-magnific" > 
+                    <div class="portfolio-content grid-gutter-lg grid-col-3 lightbox-gallery " id="container" style="position: relative; height: 2284.5px;">
+                       <div class="grid-item product branding fashion" style="position: absolute; left: 0%; top: 0px;" data-filter="elementor"> 
+                          <div class="portfolio-box-01"> 
+                             <div class="portfolio-info"> 
+                             <h5 class="white-color font-weight-bold">Merraki</h5> 
+                             <span>Architecture Elementor Kit</span> </div> 
+                             <div class="portfolio-img magnific-img"> 
+                                <a href="merraki.jpg" class="image-popup-vertical-fit gallery-link" title="Merraki"> 
+                                   <img src="merraki_thumbnail.jpg" title="" alt=""  data-speed="1" data-lag="0.2"> 
+                                   <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                </a> 
+                             </div> 
+                          </div>
+                        </div> 
+                        <div class="grid-item " style="position: absolute; left: 50%; top: 0px;" data-filter="elementor"> 
+                          <div class="portfolio-box-01">
+                              <div class="portfolio-info"> 
+                                <h5 class="white-color font-weight-bold">Technofy</h5> 
+                                <span>IT Service Elementor Kit</span> 
+                             </div> 
+                             <div class="portfolio-img magnific-img"> 
+                                <a href="technofy.jpg" class="image-popup-vertical-fit gallery-link" title="Technofy"> 
+                                   <img src="technofy_thumbnail.jpg" title="" alt="" data-speed="1" data-lag="0.4"> 
+                                   <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                </a> 
+                             </div> 
+                          </div> 
+                       </div> 
+                       <div class="grid-item product" style="position: absolute; left: 50%; top: 357px;" data-filter="elementor"> 
+                          <div class="portfolio-box-01"> <div class="portfolio-info"> 
+                             <h5 class="white-color font-weight-bold">Digital Realism</h5>
+                              <span>NFT Elementor Kit</span>
+                              </div>
+                              <div class="portfolio-img magnific-img"> 
+                                <a href="digital realism.png" class="image-popup-vertical-fit gallery-link" title="Digital Realism"> 
+                                   <img src="digital_realism_thumbnail.jpg" title="" alt="" data-speed="1" data-lag="0.6"> 
+                                   <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                </a> 
+                             </div> 
+                          </div> 
+                       </div> 
+                       <div class="grid-item product" style="position: absolute; left: 0%; top: 481.875px;" data-filter="elementor"> 
+                          <div class="portfolio-box-01"> <div class="portfolio-info">
+                              <h5 class="white-color font-weight-bold">Glib</h5> 
+                              <span>NFT Store Elementor Kit</span> </div> 
+                              <div class="portfolio-img magnific-img"> 
+                                <a href="glib .png" class="image-popup-vertical-fit gallery-link" title="Glib" > 
+                                   <img src="glib _thumbnail.jpg" title="" alt="" data-speed="1" data-lag="0.8"> 
+                                   <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                </a> 
+                             </div> 
+                             </div> 
+                          </div> 
+                          <div class="grid-item" style="position: absolute; left: 50%; top: 963.75px;" data-filter="elementor"> 
+                             <div class="portfolio-box-01"> 
+                                <div class="portfolio-info">
+                                    <h5 class="white-color font-weight-bold">Whiz Cyber</h5> 
+                                    <span>Cyber Security Elementor Kit</span> </div> 
+                                    <div class="portfolio-img magnific-img"> 
+                                      <a href="whiz_cyber.png" class="image-popup-vertical-fit gallery-link" title="Whiz Cyber"> 
+                                         <img src="whiz_cyber_thumbnail.jpg" title="" alt="" data-speed="1" data-lag="0.10"> 
+                                         <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                      </a> 
+                                   </div> 
+                                   </div> 
+                                </div> 
+                                <div class="grid-item product" style="position: absolute; left: 0%; top: 1088.62px;" data-filter="elementor"> 
+                                   <div class="portfolio-box-01"> 
+                                      <div class="portfolio-info"> 
+                                         <h5 class="white-color font-weight-bold">Yogastic</h5> 
+                                         <span>Yoga & Fitness Elementor Kit</span>
+                                       </div> 
+                                       <div class="portfolio-img magnific-img"> 
+                                         <a href="yogastic.png" class="image-popup-vertical-fit gallery-link" title="Yogastic"> 
+                                            <img src="yogastic_thumbnail.jpg" title="" alt=""> 
+                                            <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                         </a> 
+                                      </div> 
+                                       </div> 
+                                      </div> 
+                                      <div class="grid-item " style="position: absolute; left: 50%; top: 1320.75px;" data-filter="elementor">
+                                          <div class="portfolio-box-01">
+                                             <div class="portfolio-info">
+                                                <h5 class="white-color font-weight-bold">Xtreme Fitness</h5> 
+                                                <span>Fitness Elementor Kit</span> </div> 
+                                                <div class="portfolio-img magnific-img"> 
+                                                  <a href="xtrme fitness.png" class="image-popup-vertical-fit gallery-link" title="Xtreme Fitness"> 
+                                                     <img src="xtrme_fitness_thumbnail.jpg" title="" alt=""> 
+                                                     <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                                  </a> 
+                                               </div> 
+                                            </div> 
+                                         </div> 
+                                         <div class="grid-item " style="position: absolute; left: 50%; top: 1320.75px;" data-filter="wordpress">
+                                            <div class="portfolio-box-01">
+                                               <div class="portfolio-info">
+                                                  <h5 class="white-color font-weight-bold"><a href="https://leaphealth.ai/providers" target="_blank">Leap Health</a> </h5> 
+                                                  <span>Wordpress Based Website</span> </div> 
+                                                  <div class="portfolio-img magnific-img"> 
+                                                    <a href="leaphealth-ai-.png" class="image-popup-vertical-fit gallery-link" title="Xtreme Fitness"> 
+                                                       <img src="leaphealth-ai-thumbnail.jpg" title="" alt=""> 
+                                                       <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                                    </a> 
+                                                 </div> 
+                                              </div> 
+                                           </div> 
+                                           <div class="grid-item " style="position: absolute; left: 50%; top: 1320.75px;" data-filter="html">
+                                            <div class="portfolio-box-01">
+                                               <div class="portfolio-info">
+                                                  <h5 class="white-color font-weight-bold"><a href="https://www.curemd.com/whitepaper/how-to-improve-roi-for-your-medical-practice.html" target="_blank">SEO Whitepaper</a> </h5> 
+                                                  <span>Html, CSS, JS Whitepaper</span> </div> 
+                                                  <div class="portfolio-img magnific-img"> 
+                                                    <a href="curemd-whitepaper-1.png" class="image-popup-vertical-fit gallery-link" title="Whitepaper"> 
+                                                       <img src="whitepaper-how-to-improve-roi_thumbnail.jpg" title="" alt=""> 
+                                                       <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                                    </a> 
+                                                 </div> 
+                                              </div> 
+                                           </div> 
+                                           <div class="grid-item " style="position: absolute; left: 50%; top: 1320.75px;" data-filter="html">
+                                            <div class="portfolio-box-01">
+                                               <div class="portfolio-info">
+                                                  <h5 class="white-color font-weight-bold"><a href="https://www.curemd.com/ehr-vendor-pricing-analysis/" target="_blank">SEO Whitepaper</a> </h5> 
+                                                  <span>Html, Bootstrap, JS Responsive Whitepaper</span> </div> 
+                                                  <div class="portfolio-img magnific-img"> 
+                                                    <a href="whitepaper-2.png" class="image-popup-vertical-fit gallery-link" title="Whitepaper"> 
+                                                       <img src="whitepaper-2-thumb.jpg" title="" alt=""> 
+                                                       <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                                    </a> 
+                                                 </div> 
+                                              </div> 
+                                           </div> 
+                                           <div class="grid-item " style="position: absolute; left: 50%; top: 1320.75px;" data-filter="html">
+                                            <div class="portfolio-box-01">
+                                               <div class="portfolio-info">
+                                                  <h5 class="white-color font-weight-bold"><a href="https://www.curemd.com/medical-coding-services.asp" target="_blank">Medical Coding Services</a> </h5> 
+                                                  <span>Html, Bootstrap, JS Responsive Web Page</span> </div> 
+                                                  <div class="portfolio-img magnific-img"> 
+                                                    <a href="html-website.png" class="image-popup-vertical-fit gallery-link" title="Website Page"> 
+                                                       <img src="html-website_thumbnail.jpg" title="" alt=""> 
+                                                       <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                                    </a> 
+                                                 </div> 
+                                              </div> 
+                                           </div> 
+                                           <div class="grid-item " style="position: absolute; left: 50%; top: 1320.75px;" data-filter="html">
+                                            <div class="portfolio-box-01">
+                                               <div class="portfolio-info">
+                                                  <h5 class="white-color font-weight-bold"><a href="https://www.curemd.com/ambulatory-ehr.asp" target="_blank">Ambulatory EHR</a> </h5> 
+                                                  <span>Html, Bootstrap, JS Responsive Web Page</span> </div> 
+                                                  <div class="portfolio-img magnific-img"> 
+                                                    <a href="curemd-ambulatory-ehr.png" class="image-popup-vertical-fit gallery-link" title="Website Page"> 
+                                                       <img src="curemd-ambulatory-ehr_thumbnail.jpg" title="" alt=""> 
+                                                       <div class="portfolio-icon"><span class="ti-plus"></span></div>
+                                                    </a> 
+                                                 </div> 
+                                              </div> 
+                                           </div> 
+                                       </div> 
+                                      </div>
+               </div>
+            </section>
+            <section id="contactus" data-nav-tooltip="Contact Me" class="pp-section pp-scrollable section dark-bg">
+               <div class="container">
+                  <div class="title">
+                     <h3>Get in touch.</h3>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-5 col-xl-4 m-15px-tb">
+                        <div class="contact-info">
+                           <h4>Get in touch</h4>
+                           <p>Always available for freelancing if the right project comes along, Feel free to contact me.</p>
+                           <ul>
+                              <li class="media d-flex mb-3"><i class="ti-email"></i><span class="media-body"><a class="text-decoration-none text-white" href="mailto:fareenaakram18@gmail.com">fareenaakram18@gmail.com</a></span></li>
+                              <!-- <li class="media d-flex mb-0"><i class="ti-mobile"></i><span class="media-body">+92 3324452232</span></li> -->
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-lg-7 col-xl-8 m-15px-tb">
+                        <div class="contact-form">
+                           <h4>Say Something</h4>
+                           <form id="contact-form" method="POST" action="send-email.php">
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                       <input name="name" id="name" class="form-control" type="text" value="">
+                                       <label for="name">Name</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                       <input name="email" id="email" class="form-control" type="email" value="">
+                                       <label for="email">Email</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="form-group mb-3">
+                                       <input name="subject" id="subject" class="form-control" type="text" value="">
+                                       <label for="subject">Subject</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                       <textarea name="message" id="message" rows="5" class="form-control"></textarea>
+                                       <label for="messgae">Message</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <div class="send">
+                                       <input class="px-btn px-btn-theme" type="submit" value="send message">
+                                    </div>
+                                    <span id="suce_message" class="text-success" style="display:none">Message Sent Successfully</span>
+                                    <span id="err_message" class="text-danger" style="display:none">Message Sending Failed</span>
+                                 </div>
+                              </div>
+                           </form>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+      
+         
+       </main>
+     
+
+       <script>
+         document.addEventListener("DOMContentLoaded", function() {
+            // Simulate loading time
+            setTimeout(() => {
+                // Add 'loaded' class to initiate the animations
+                document.querySelector('.loader-wrapper').classList.add('loaded');
+                
+                // Optionally, remove the loader from the DOM after the animations end
+                setTimeout(() => {
+                    document.querySelector('.loader-wrapper').style.display = 'none';
+                }, 1000); // Adjust this time based on your CSS transition duration
+            }, 1200); // Adjust this time for how long you want the loader to show
+        });
+        
+     </script>
+    </div>
+  
+  
+    <script>
+    $(document).ready(function() {
+      $('#contact-form').on('submit', function(event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          $.ajax({
+              url: $(this).attr('action'), // The URL to send the request to
+              method: $(this).attr('method'), // The HTTP method to use
+              data: $(this).serialize(), // Serialize the form data
+              success: function(response) {
+                  if (response.includes('Message Sent Successfully')) {
+                      $('#suce_message').show();
+                      $('#err_message').hide();
+                  } else {
+                      $('#err_message').show();
+                      $('#suce_message').hide();
+                  }
+              },
+              error: function() {
+                  $('#err_message').show();
+                  $('#suce_message').hide();
+              }
+          });
+      });
+  });
+</script>
+    
+   <script>
+
+      document.addEventListener('DOMContentLoaded', () => {
+         const sections = document.querySelectorAll('.section');
+     
+         const options = {
+             root: null,
+             threshold: 0.1, // Trigger when 10% of the section is visible
+             rootMargin: '0px'
+         };
+     
+         const observer = new IntersectionObserver((entries) => {
+             entries.forEach(entry => {
+                 if (entry.isIntersecting) {
+                     entry.target.classList.add('fade-in'); // Add fade-in class when section is visible
+                 } else {
+                     entry.target.classList.remove('fade-in'); // Remove fade-in class when section goes out of view
+                 }
+             });
+         }, options);
+     
+         sections.forEach(section => {
+             observer.observe(section); // Observe each section
+         });
+     });
+     
+     
+     
+      $(document).ready(function(){
+         $('.image-popup-vertical-fit').magnificPopup({
+            type: 'image',
+           mainClass: 'mfp-with-zoom', 
+           gallery:{
+                  enabled:true
+               },
+         
+           zoom: {
+             enabled: true, 
+         
+             duration: 300, // duration of the effect, in milliseconds
+             easing: 'ease-in-out', // CSS transition easing function
+         
+             opener: function(openerElement) {
+         
+               return openerElement.is('img') ? openerElement : openerElement.find('img');
+           }
+         }
+         
+         });
+         
+         });
+   </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js'></script>
+ </body>
+ </html>
