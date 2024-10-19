@@ -48,3 +48,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+
+// Handle form submission
+function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    // Use Fetch to send form data to Netlify
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(() => {
+        // Show the success message popup
+        document.getElementById('success-message').classList.remove('hidden');
+    })
+    .catch((error) => alert('Form submission error: ' + error));
+}
+
+// Close the success message popup
+function closePopup() {
+    document.getElementById('success-message').classList.add('hidden');
+}
+
