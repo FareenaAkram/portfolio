@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // }
 
 
-function handleFormSubmit(event) {
+function handleSubmit(event) {
   event.preventDefault();
   const form = document.getElementById('contact-form');
 
