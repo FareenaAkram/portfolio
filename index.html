@@ -578,8 +578,7 @@
                                     <div class="send">
                                        <input class="px-btn px-btn-theme" type="submit" value="send message">
                                     </div>
-                                    <span id="suce_message" class="text-success" style="display:none">Message Sent Successfully</span>
-                                    <span id="err_message" class="text-danger" style="display:none">Message Sending Failed</span>
+                                  
                                  </div>
                               </div>
                            </form>
@@ -616,32 +615,7 @@
     </div>
   
   
-    <script>
-    $(document).ready(function() {
-      $('#contact-form').on('submit', function(event) {
-          event.preventDefault(); // Prevent the default form submission
-
-          $.ajax({
-              url: $(this).attr('action'), // The URL to send the request to
-              method: $(this).attr('method'), // The HTTP method to use
-              data: $(this).serialize(), // Serialize the form data
-              success: function(response) {
-                  if (response.includes('Message Sent Successfully')) {
-                      $('#suce_message').show();
-                      $('#err_message').hide();
-                  } else {
-                      $('#err_message').show();
-                      $('#suce_message').hide();
-                  }
-              },
-              error: function() {
-                  $('#err_message').show();
-                  $('#suce_message').hide();
-              }
-          });
-      });
-  });
-</script>
+    
     
    <script>
 
