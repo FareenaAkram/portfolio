@@ -548,7 +548,7 @@
                      <div class="col-lg-7 col-xl-8 m-15px-tb">
                         <div class="contact-form">
                            <h4>Say Something</h4>
-                           <form id="contact-form" method="POST" netlify>
+                           <form id="contact-form" method="POST" netlify onsubmit="handleSubmit(event)">
                               <div class="row">
                                  <div class="col-md-6">
                                     <div class="form-group mb-3">
@@ -583,7 +583,11 @@
                                  </div>
                               </div>
                            </form>
-                           
+                           <!-- Success Message Popup -->
+                                  <div id="success-message" class="hidden">
+                                      <p>Your form has been submitted successfully!</p>
+                                      <button onclick="closePopup()">Close</button>
+                                 </div>
                         </div>
                      </div>
                   </div>
