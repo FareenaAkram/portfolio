@@ -2518,31 +2518,52 @@ you can use the generic selector below, but it's slower:
 
 
 
-/* Styling for hidden and visible popup */
+/* Popup styling */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f4ff; /* Matches your site's blue tone */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 300px;
+  text-align: center;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-icon {
+  font-size: 30px;
+  color: #0078D4; /* Use a bold blue from your site's color scheme */
+  margin-bottom: 15px;
+}
+
+.popup p {
+  font-size: 18px;
+  color: #333;
+}
+
+button {
+  background-color: #0078D4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
 .hidden {
-    display: none;
-}
-
-#success-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #4caf50;
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    z-index: 100;
-}
-
-#success-message button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: white;
-    color: #4caf50;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  display: none;
 }
