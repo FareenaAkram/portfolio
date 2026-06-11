@@ -1,0 +1,37 @@
+.appContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainWrapper {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left var(--transition-slow);
+}
+
+.main {
+  flex: 1;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: calc(var(--z-sidebar) - 1);
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .mainWrapper {
+    margin-left: 0;
+  }
+
+  .backdrop {
+    display: block;
+  }
+}

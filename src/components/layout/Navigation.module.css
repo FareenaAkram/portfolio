@@ -1,0 +1,62 @@
+.nav {
+  flex: 1;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.item {
+  position: relative;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color var(--transition-base), background var(--transition-base);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.link:hover {
+  color: var(--text-primary);
+  background: var(--surface-hover);
+}
+
+.link.active {
+  color: var(--primary-light);
+  background: var(--surface-active);
+}
+
+/* Animated left bar indicator */
+.indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gradient-primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: color var(--transition-base);
+}
+
+.label {
+  letter-spacing: 0.01em;
+}

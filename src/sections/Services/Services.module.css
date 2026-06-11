@@ -1,0 +1,131 @@
+.services {
+  position: relative;
+  padding: var(--space-24) 0;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.bgBlob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(99,102,241,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-16);
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Grid ────────────────────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+/* ─── Card ────────────────────────────────────────────────────────────────── */
+.card {
+  position: relative;
+  padding: var(--space-8);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  cursor: default;
+  transition:
+    border-color var(--transition-base),
+    background var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  box-shadow: 0 8px 40px rgba(99,102,241,0.1);
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+.card:hover .cardLine {
+  width: 100%;
+}
+
+/* Radial glow inside card */
+.cardGlow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 65%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+/* Top accent bar */
+.cardLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--gradient-primary);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  transition: width var(--transition-slow);
+}
+
+/* Icon */
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  background: var(--surface-active);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  color: var(--primary-light);
+  margin-bottom: var(--space-5);
+  transition: all var(--transition-base);
+}
+
+.card:hover .iconWrap {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 20px var(--primary-glow);
+}
+
+.cardTitle {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .container { padding: 0 var(--space-8); }
+}
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+}

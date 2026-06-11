@@ -1,0 +1,357 @@
+.about {
+  background: var(--bg-secondary);
+  padding: var(--space-24) 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-16);
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: var(--space-20) 0;
+}
+
+/* ─── Bio Row ─────────────────────────────────────────────────────────────── */
+.bioRow {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+/* Image */
+.imageWrap {
+  position: relative;
+}
+
+.imageFrame {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.imageGlow {
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.collageImg {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.statCard {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: 0 12px 40px var(--primary-glow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  z-index: 10;
+}
+
+.statNum {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.statLabel {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Bio text */
+.bioText {}
+
+.bio {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+}
+
+.ctaBar {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+/* ─── Education & Skills Row ──────────────────────────────────────────────── */
+.eduSkillsRow {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+/* Education */
+.eduWrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.eduCard {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-base), background var(--transition-base);
+}
+
+.eduCard:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+}
+
+.eduDot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  flex-shrink: 0;
+  margin-top: 6px;
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+.eduBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.eduPeriod {
+  font-size: var(--text-xs);
+  color: var(--primary-light);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.eduDegree {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.eduInstitution {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Skills */
+.skillsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.skillsHeading {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.skillsDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.skillItem {}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.skillName {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.skillLevel {
+  font-size: var(--text-xs);
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+.skillTrack {
+  height: 5px;
+  background: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skillFill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+
+/* ─── Experience ──────────────────────────────────────────────────────────── */
+.expList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.expCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  transition: border-color var(--transition-base), background var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.expCard:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  box-shadow: var(--shadow-card);
+}
+
+.expHeader {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+}
+
+.expLogo {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+}
+
+.expLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.expMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.expRole {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.expCompany {
+  font-size: var(--text-sm);
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+.expTags {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-1);
+}
+
+.expPeriod,
+.expType {
+  font-size: var(--text-xs);
+  padding: 0.2rem 0.6rem;
+  background: var(--surface-active);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.expPoints {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.expPoint {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--border);
+  transition: border-color var(--transition-base);
+}
+
+.expCard:hover .expPoint {
+  border-left-color: var(--primary);
+}
+
+.expPoint strong {
+  color: var(--text-primary);
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .container { padding: 0 var(--space-8); }
+  .bioRow { gap: var(--space-10); }
+  .eduSkillsRow { gap: var(--space-10); }
+}
+
+@media (max-width: 768px) {
+  .bioRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .imageFrame {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .statCard {
+    bottom: -10px;
+    right: -10px;
+  }
+
+  .eduSkillsRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .ctaBar { flex-wrap: wrap; }
+}
