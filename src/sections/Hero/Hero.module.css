@@ -44,8 +44,8 @@
 /* ─── Layout ──────────────────────────────────────────────────────────────── */
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1003px;
+  /* margin: 0 auto; */
   padding: 0 var(--space-16);
   position: relative;
   z-index: 1;
@@ -148,7 +148,7 @@
   width: 100%;
   max-width: 420px;
   border-radius: var(--radius-2xl);
-  overflow: hidden;
+  /* overflow: hidden; */
   border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
   aspect-ratio: 4/5;
