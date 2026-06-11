@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import SectionTitle from '../../components/common/SectionTitle';
 import Button from '../../components/common/Button';
+import { img } from '../../utils/assets';
 import { SKILLS } from '../../data/skills';
 import { EXPERIENCE, EDUCATION } from '../../data/experience';
 import { fadeUp, slideLeft, slideRight, stagger, viewportOnce } from '../../utils/animations';
@@ -75,7 +76,7 @@ export default function About() {
             <div className={styles.imageFrame}>
               <div className={styles.imageGlow} aria-hidden="true" />
               <img
-                src="/images/collage.png"
+                src={img('images/collage.png')}
                 alt="About Fareena Akram"
                 className={styles.collageImg}
               />

@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navigation from './Navigation';
 import ThemeToggle from '../ui/ThemeToggle';
 import TypingAnimation from '../ui/TypingAnimation';
+import { img } from '../../utils/assets';
 import { Linkedin } from 'lucide-react';
 import styles from './Sidebar.module.css';
 
@@ -28,7 +29,7 @@ export default function Sidebar({ menuOpen, onClose }) {
           <div className={styles.profile}>
             <div className={styles.avatarRing}>
               <img
-                src="/images/profile.png"
+                src={img('images/profile.png')}
                 alt="Fareena Akram"
                 className={styles.avatar}
               />

@@ -1,3 +1,5 @@
+import { img } from '../utils/assets';
+
 export const FILTERS = [
   { id: '*',         label: 'All' },
   { id: 'elementor', label: 'Elementor Kit' },
@@ -11,8 +13,8 @@ export const PROJECTS = [
     title:     'Merraki',
     subtitle:  'Architecture Elementor Kit',
     filter:    'elementor',
-    thumbnail: '/images/merraki-thumb.jpg',
-    fullImage: '/images/merraki-full.jpg',
+    thumbnail: img('images/merraki-thumb.jpg'),
+    fullImage: img('images/merraki-full.jpg'),
     link:      null,
   },
   {
@@ -20,8 +22,8 @@ export const PROJECTS = [
     title:     'Technofy',
     subtitle:  'IT Service Elementor Kit',
     filter:    'elementor',
-    thumbnail: '/images/technofy-thumb.jpg',
-    fullImage: '/images/technofy-full.jpg',
+    thumbnail: img('images/technofy-thumb.jpg'),
+    fullImage: img('images/technofy-full.jpg'),
     link:      null,
   },
   {
@@ -29,8 +31,8 @@ export const PROJECTS = [
     title:     'Digital Realism',
     subtitle:  'NFT Elementor Kit',
     filter:    'elementor',
-    thumbnail: '/images/digital-realism-thumb.jpg',
-    fullImage: '/images/digital-realism-full.png',
+    thumbnail: img('images/digital-realism-thumb.jpg'),
+    fullImage: img('images/digital-realism-full.png'),
     link:      null,
   },
   {
@@ -38,8 +40,8 @@ export const PROJECTS = [
     title:     'Glib',
     subtitle:  'NFT Store Elementor Kit',
     filter:    'elementor',
-    thumbnail: '/images/glib-thumb.jpg',
-    fullImage: '/images/glib-full.png',
+    thumbnail: img('images/glib-thumb.jpg'),
+    fullImage: img('images/glib-full.png'),
     link:      null,
   },
   {
@@ -47,8 +49,8 @@ export const PROJECTS = [
     title:     'Whiz Cyber',
     subtitle:  'Cyber Security Elementor Kit',
     filter:    'elementor',
-    thumbnail: '/images/whiz-cyber-thumb.jpg',
-    fullImage: '/images/whiz-cyber-full.png',
+    thumbnail: img('images/whiz-cyber-thumb.jpg'),
+    fullImage: img('images/whiz-cyber-full.png'),
     link:      null,
   },
   {
@@ -56,8 +58,8 @@ export const PROJECTS = [
     title:     'Yogastic',
     subtitle:  'Yoga & Fitness Elementor Kit',
     filter:    'elementor',
-    thumbnail: '/images/yogastic-thumb.jpg',
-    fullImage: '/images/yogastic-full.png',
+    thumbnail: img('images/yogastic-thumb.jpg'),
+    fullImage: img('images/yogastic-full.png'),
     link:      null,
   },
   {
@@ -65,8 +67,8 @@ export const PROJECTS = [
     title:     'Xtreme Fitness',
     subtitle:  'Fitness Elementor Kit',
     filter:    'elementor',
-    thumbnail: '/images/xtreme-fitness-thumb.jpg',
-    fullImage: '/images/xtreme-fitness-full.png',
+    thumbnail: img('images/xtreme-fitness-thumb.jpg'),
+    fullImage: img('images/xtreme-fitness-full.png'),
     link:      null,
   },
   {
@@ -74,8 +76,8 @@ export const PROJECTS = [
     title:     'Leap Health',
     subtitle:  'WordPress Based Website',
     filter:    'wordpress',
-    thumbnail: '/images/leaphealth-thumb.jpg',
-    fullImage: '/images/leaphealth-full.png',
+    thumbnail: img('images/leaphealth-thumb.jpg'),
+    fullImage: img('images/leaphealth-full.png'),
     link:      'https://leaphealth.ai/providers',
   },
   {
@@ -83,8 +85,8 @@ export const PROJECTS = [
     title:     'SEO Whitepaper',
     subtitle:  'HTML, CSS, JS Whitepaper',
     filter:    'html',
-    thumbnail: '/images/whitepaper1-thumb.jpg',
-    fullImage: '/images/whitepaper1-full.png',
+    thumbnail: img('images/whitepaper1-thumb.jpg'),
+    fullImage: img('images/whitepaper1-full.png'),
     link:      'https://www.curemd.com/whitepaper/how-to-improve-roi-for-your-medical-practice.html',
   },
   {
@@ -92,8 +94,8 @@ export const PROJECTS = [
     title:     'SEO Whitepaper',
     subtitle:  'HTML, Bootstrap, JS Responsive Whitepaper',
     filter:    'html',
-    thumbnail: '/images/whitepaper2-thumb.jpg',
-    fullImage: '/images/whitepaper2-full.png',
+    thumbnail: img('images/whitepaper2-thumb.jpg'),
+    fullImage: img('images/whitepaper2-full.png'),
     link:      'https://www.curemd.com/ehr-vendor-pricing-analysis/',
   },
   {
@@ -101,8 +103,8 @@ export const PROJECTS = [
     title:     'Medical Coding Services',
     subtitle:  'HTML, Bootstrap, JS Responsive Web Page',
     filter:    'html',
-    thumbnail: '/images/medical-coding-thumb.jpg',
-    fullImage: '/images/medical-coding-thumb.jpg',
+    thumbnail: img('images/medical-coding-thumb.jpg'),
+    fullImage: img('images/medical-coding-thumb.jpg'),
     link:      'https://www.curemd.com/medical-coding-services.asp',
   },
   {
@@ -110,8 +112,8 @@ export const PROJECTS = [
     title:     'Ambulatory EHR',
     subtitle:  'HTML, Bootstrap, JS Responsive Web Page',
     filter:    'html',
-    thumbnail: '/images/ambulatory-ehr-thumb.jpg',
-    fullImage: '/images/ambulatory-ehr-full.png',
+    thumbnail: img('images/ambulatory-ehr-thumb.jpg'),
+    fullImage: img('images/ambulatory-ehr-full.png'),
     link:      'https://www.curemd.com/ambulatory-ehr.asp',
   },
 ];

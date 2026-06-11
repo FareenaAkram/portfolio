@@ -1,3 +1,5 @@
+import { img } from '../utils/assets';
+
 export const EXPERIENCE = [
   {
     id:       'curemd',
@@ -5,7 +7,7 @@ export const EXPERIENCE = [
     role:     'Web Developer',
     type:     'Full Time · Onsite',
     period:   'July 2023 — Present',
-    logo:     '/images/curemd-logo.jpg',
+    logo:     img('images/curemd-logo.jpg'),
     points: [
       {
         heading: 'Project Leadership',
@@ -35,7 +37,7 @@ export const EXPERIENCE = [
     role:     'Front-end Developer',
     type:     'Full Time · Onsite',
     period:   'Jan 2022 — June 2023',
-    logo:     '/images/devbunch-logo.svg',
+    logo:     img('images/devbunch-logo.svg'),
     points: [
       {
         heading: 'Template Development',

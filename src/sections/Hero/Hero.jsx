@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import TypingAnimation from '../../components/ui/TypingAnimation';
 import Button from '../../components/common/Button';
+import { img } from '../../utils/assets';
 import { fadeUp, slideLeft, slideRight, stagger, viewportOnce } from '../../utils/animations';
 import styles from './Hero.module.css';
 
@@ -83,7 +84,7 @@ export default function Hero() {
             <div className={styles.videoCard}>
               <div className={styles.videoGlow} aria-hidden="true" />
               <img
-                src="/images/profile.png"
+                src={img('images/profile.png')}
                 alt="Fareena Akram"
                 className={styles.heroPhoto}
               />
