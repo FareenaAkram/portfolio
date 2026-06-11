@@ -86,7 +86,7 @@ export default function Hero() {
             <div className={styles.videoCard}>
               <div className={styles.videoGlow} aria-hidden="true" />
               <img
-                src={img('images/profile.png')}
+                src={img('images/Me.png')}
                 alt="Fareena Akram"
                 className={styles.heroPhoto}
               />

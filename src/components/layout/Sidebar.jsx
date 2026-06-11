@@ -29,7 +29,7 @@ export default function Sidebar({ menuOpen, onClose }) {
           <div className={styles.profile}>
             <div className={styles.avatarRing}>
               <img
-                src={img('images/profile.png')}
+                src={img('images/Me.png')}
                 alt="Fareena Akram"
                 className={styles.avatar}
               />
