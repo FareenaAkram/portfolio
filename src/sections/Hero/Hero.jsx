@@ -9,7 +9,8 @@ import styles from './Hero.module.css';
 const TYPING_PHRASES = [
   'Frontend Engineer',
   'React Developer',
-  'Angular Developer',
+  'Angular Specialist',
+  'IBM Consultant',
   'WordPress Expert',
 ];
 
@@ -54,8 +55,9 @@ export default function Hero() {
             </motion.p>
 
             <motion.p className={styles.description} variants={fadeUp}>
-              I design and develop services for customers of all sizes, specializing in
-              creating stylish, modern websites, web services and online stores.
+              Frontend Developer with 4+ years of experience building responsive, accessible,
+              and performance-focused web interfaces. Currently at IBM — delivering front-end
+              solutions for enterprise banking applications.
             </motion.p>
 
             <motion.div className={styles.ctaBar} variants={fadeUp}>
@@ -95,7 +97,7 @@ export default function Hero() {
                 transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
               >
                 <span className={styles.badgeDot} />
-                Angular 17
+                @ IBM
               </motion.div>
               <motion.div
                 className={`${styles.floatBadge} ${styles.floatBadge2}`}
@@ -103,7 +105,7 @@ export default function Hero() {
                 transition={{ repeat: Infinity, duration: 3.5, ease: 'easeInOut', delay: 0.5 }}
               >
                 <span className={styles.badgeDot} />
-                React
+                React · Angular
               </motion.div>
               <motion.div
                 className={`${styles.floatBadge} ${styles.floatBadge3}`}
@@ -111,7 +113,7 @@ export default function Hero() {
                 transition={{ repeat: Infinity, duration: 2.8, ease: 'easeInOut', delay: 1 }}
               >
                 <span className={styles.badgeDot} />
-                3+ Years
+                4+ Years
               </motion.div>
             </div>
           </motion.div>
