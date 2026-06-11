@@ -82,22 +82,10 @@ export default function Hero() {
           <motion.div className={styles.visualSide} variants={slideRight}>
             <div className={styles.videoCard}>
               <div className={styles.videoGlow} aria-hidden="true" />
-              <video
-                className={styles.video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-              >
-                <source src="/videos/hero-video.mp4" type="video/mp4" />
-                {/* Fallback to profile photo */}
-              </video>
-              {/* Fallback image if video missing */}
               <img
                 src="/images/profile.png"
                 alt="Fareena Akram"
-                className={styles.videoFallback}
+                className={styles.heroPhoto}
               />
               {/* Floating badges */}
               <motion.div
