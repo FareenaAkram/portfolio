@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import SectionTitle from '../../components/common/SectionTitle';
 import { SERVICES } from '../../data/services';
 import { fadeUp, stagger, viewportOnce } from '../../utils/animations';
@@ -8,7 +8,7 @@ function ServiceCard({ service, index }) {
   const { Icon, title, description } = service;
 
   return (
-    <motion.article
+    <m.article
       className={styles.card}
       variants={fadeUp}
       custom={index}
@@ -22,7 +22,7 @@ function ServiceCard({ service, index }) {
       <h3 className={styles.cardTitle}>{title}</h3>
       <p className={styles.cardDesc}>{description}</p>
       <div className={styles.cardLine} aria-hidden="true" />
-    </motion.article>
+    </m.article>
   );
 }
 
@@ -38,7 +38,7 @@ export default function Services() {
           subtitle="From pixel-perfect UI implementation to full Angular and React application builds — I bring designs to life with clean, performant code."
         />
 
-        <motion.div
+        <m.div
           className={styles.grid}
           variants={stagger(0.1)}
           initial="hidden"
@@ -48,7 +48,7 @@ export default function Services() {
           {SERVICES.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

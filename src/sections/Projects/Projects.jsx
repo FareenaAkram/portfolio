@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Building2, Calendar, ChevronRight, Star } from 'lucide-react';
 import SectionTitle from '../../components/common/SectionTitle';
 import Badge from '../../components/common/Badge';
@@ -14,7 +14,7 @@ function ProjectCard({ project, index }) {
   const isEven = index % 2 === 0;
 
   return (
-    <motion.article
+    <m.article
       className={`${styles.card} ${project.featured ? styles.featured : ''}`}
       variants={fadeUp}
       whileHover={{ y: -4 }}
@@ -59,7 +59,7 @@ function ProjectCard({ project, index }) {
 
       {/* Glow accent */}
       <div className={styles.cardGlow} aria-hidden="true" />
-    </motion.article>
+    </m.article>
   );
 }
 
@@ -75,7 +75,7 @@ export default function Projects() {
           subtitle="Real-world applications built at IBM and CureMD — from KYC risk management systems to AI chat interfaces and Angular web platforms."
         />
 
-        <motion.div
+        <m.div
           className={styles.grid}
           variants={stagger(0.1)}
           initial="hidden"
@@ -85,7 +85,7 @@ export default function Projects() {
           {CODE_PROJECTS.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

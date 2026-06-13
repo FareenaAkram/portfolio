@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useScrollSpy } from '../../hooks/useScrollSpy';
 import { NAV_ITEMS } from '../../data/navigation';
 import styles from './Navigation.module.css';
@@ -35,7 +35,7 @@ export default function Navigation({ onLinkClick }) {
                 aria-current={isActive ? 'page' : undefined}
               >
                 {isActive && (
-                  <motion.span
+                  <m.span
                     layoutId="nav-indicator"
                     className={styles.indicator}
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}

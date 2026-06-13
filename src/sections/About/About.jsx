@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Award } from 'lucide-react';
 import SectionTitle from '../../components/common/SectionTitle';
 import Button from '../../components/common/Button';
@@ -10,13 +10,13 @@ import styles from './About.module.css';
 
 function SkillBar({ name, level, index }) {
   return (
-    <motion.div className={styles.skillItem} variants={fadeUp} custom={index}>
+    <m.div className={styles.skillItem} variants={fadeUp} custom={index}>
       <div className={styles.skillHeader}>
         <span className={styles.skillName}>{name}</span>
         <span className={styles.skillLevel}>{level}%</span>
       </div>
       <div className={styles.skillTrack}>
-        <motion.div
+        <m.div
           className={styles.skillFill}
           initial={{ width: 0 }}
           whileInView={{ width: `${level}%` }}
@@ -24,18 +24,18 @@ function SkillBar({ name, level, index }) {
           transition={{ duration: 1.1, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
         />
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
 function ExperienceCard({ item }) {
   return (
-    <motion.div className={`${styles.expCard} ${item.current ? styles.expCurrent : ''}`} variants={fadeUp}>
+    <m.div className={`${styles.expCard} ${item.current ? styles.expCurrent : ''}`} variants={fadeUp}>
       {item.current && <div className={styles.currentBadge}><span className={styles.currentDot} />Currently Here</div>}
       <div className={styles.expHeader}>
         <div className={styles.expLogo}>
           {item.logo ? (
-            <img src={item.logo} alt={item.company} />
+            <img src={item.logo} alt={item.company} loading="lazy" decoding="async" />
           ) : (
             <span className={styles.expLogoText}>{item.logoText}</span>
           )}
@@ -56,19 +56,19 @@ function ExperienceCard({ item }) {
           </li>
         ))}
       </ul>
-    </motion.div>
+    </m.div>
   );
 }
 
 function CertCard({ cert }) {
   return (
-    <motion.div className={styles.certCard} variants={fadeUp}>
+    <m.div className={styles.certCard} variants={fadeUp}>
       <Award size={16} className={styles.certIcon} />
       <div className={styles.certBody}>
         <span className={styles.certName}>{cert.name}</span>
         <span className={styles.certIssuer}>{cert.issuer}</span>
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -79,7 +79,7 @@ export default function About() {
 
         {/* ── Bio Row ──────────────────────────────────────────────────────── */}
         <div className={styles.bioRow}>
-          <motion.div
+          <m.div
             className={styles.imageWrap}
             variants={slideLeft}
             initial="hidden"
@@ -92,19 +92,21 @@ export default function About() {
                 src={img('images/collage.png')}
                 alt="About Fareena Akram"
                 className={styles.collageImg}
+                loading="lazy"
+                decoding="async"
               />
             </div>
-            <motion.div
+            <m.div
               className={styles.statCard}
               animate={{ y: [0, -6, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
             >
               <span className={styles.statNum}>4+</span>
               <span className={styles.statLabel}>Years of Experience</span>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             className={styles.bioText}
             variants={slideRight}
             initial="hidden"
@@ -144,7 +146,7 @@ export default function About() {
                 View Portfolio
               </Button>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* ── Education & Skills ────────────────────────────────────────────── */}
@@ -153,7 +155,7 @@ export default function About() {
 
         <div className={styles.eduSkillsRow}>
           {/* Education */}
-          <motion.div
+          <m.div
             className={styles.eduWrap}
             variants={stagger(0.1)}
             initial="hidden"
@@ -161,7 +163,7 @@ export default function About() {
             viewport={viewportOnce}
           >
             {EDUCATION.map((edu, i) => (
-              <motion.div key={i} className={styles.eduCard} variants={fadeUp}>
+              <m.div key={i} className={styles.eduCard} variants={fadeUp}>
                 <div className={styles.eduDot} />
                 <div className={styles.eduBody}>
                   <span className={styles.eduPeriod}>{edu.period}</span>
@@ -169,12 +171,12 @@ export default function About() {
                   <p className={styles.eduInstitution}>{edu.institution}</p>
                   <span className={styles.eduGpa}>cGPA: {edu.gpa}</span>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
 
           {/* Skills */}
-          <motion.div
+          <m.div
             className={styles.skillsWrap}
             variants={stagger(0.07)}
             initial="hidden"
@@ -188,14 +190,14 @@ export default function About() {
             {SKILLS.map((skill, i) => (
               <SkillBar key={skill.name} {...skill} index={i} />
             ))}
-          </motion.div>
+          </m.div>
         </div>
 
         {/* ── Experience ────────────────────────────────────────────────────── */}
         <div className={styles.divider} />
         <SectionTitle eyebrow="Career" title="Work Experience." />
 
-        <motion.div
+        <m.div
           className={styles.expList}
           variants={stagger(0.12)}
           initial="hidden"
@@ -205,13 +207,13 @@ export default function About() {
           {EXPERIENCE.map(item => (
             <ExperienceCard key={item.id} item={item} />
           ))}
-        </motion.div>
+        </m.div>
 
         {/* ── Certifications ────────────────────────────────────────────────── */}
         <div className={styles.divider} />
         <SectionTitle eyebrow="Learning" title="Courses & Certifications." />
 
-        <motion.div
+        <m.div
           className={styles.certGrid}
           variants={stagger(0.06)}
           initial="hidden"
@@ -221,7 +223,7 @@ export default function About() {
           {CERTIFICATIONS.map((cert, i) => (
             <CertCard key={i} cert={cert} />
           ))}
-        </motion.div>
+        </m.div>
 
       </div>
     </section>

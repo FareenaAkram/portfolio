@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { ExternalLink, X, ZoomIn } from 'lucide-react';
 import SectionTitle from '../../components/common/SectionTitle';
 import { PROJECTS, FILTERS } from '../../data/portfolio';
@@ -10,21 +10,21 @@ function FilterBar({ active, onChange }) {
   return (
     <div className={styles.filterBar} role="group" aria-label="Filter projects">
       {FILTERS.map(f => (
-        <motion.button
+        <m.button
           key={f.id}
           className={`${styles.filterBtn} ${active === f.id ? styles.filterActive : ''}`}
           onClick={() => onChange(f.id)}
           whileTap={{ scale: 0.95 }}
         >
           {active === f.id && (
-            <motion.span
+            <m.span
               layoutId="filter-pill"
               className={styles.filterPill}
               transition={{ type: 'spring', stiffness: 380, damping: 30 }}
             />
           )}
           <span className={styles.filterLabel}>{f.label}</span>
-        </motion.button>
+        </m.button>
       ))}
     </div>
   );
@@ -32,7 +32,7 @@ function FilterBar({ active, onChange }) {
 
 function ProjectCard({ project, onClick }) {
   return (
-    <motion.article
+    <m.article
       className={styles.card}
       variants={fadeUp}
       layout
@@ -45,8 +45,9 @@ function ProjectCard({ project, onClick }) {
           alt={project.title}
           className={styles.thumb}
           loading="lazy"
+          decoding="async"
         />
-        <motion.div
+        <m.div
           className={styles.overlay}
           variants={{ rest: { opacity: 0 }, hover: { opacity: 1 } }}
           transition={{ duration: 0.25 }}
@@ -56,7 +57,7 @@ function ProjectCard({ project, onClick }) {
             <h4 className={styles.overlayTitle}>{project.title}</h4>
             <p className={styles.overlaySub}>{project.subtitle}</p>
           </div>
-        </motion.div>
+        </m.div>
       </div>
 
       <div className={styles.cardBody}>
@@ -77,7 +78,7 @@ function ProjectCard({ project, onClick }) {
           </a>
         )}
       </div>
-    </motion.article>
+    </m.article>
   );
 }
 
@@ -85,14 +86,14 @@ function LightboxModal({ project, onClose }) {
   return (
     <AnimatePresence>
       {project && (
-        <motion.div
+        <m.div
           className={styles.lightboxBackdrop}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
-          <motion.div
+          <m.div
             className={styles.lightboxContent}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -107,6 +108,8 @@ function LightboxModal({ project, onClose }) {
               src={project.fullImage}
               alt={project.title}
               className={styles.lightboxImg}
+              loading="lazy"
+              decoding="async"
             />
             <div className={styles.lightboxMeta}>
               <div>
@@ -125,8 +128,8 @@ function LightboxModal({ project, onClose }) {
                 </a>
               )}
             </div>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       )}
     </AnimatePresence>
   );
@@ -155,7 +158,7 @@ export default function Portfolio() {
 
         <FilterBar active={activeFilter} onChange={setActiveFilter} />
 
-        <motion.div
+        <m.div
           className={styles.grid}
           layout
           variants={stagger(0.06)}
@@ -164,7 +167,7 @@ export default function Portfolio() {
         >
           <AnimatePresence mode="popLayout">
             {filtered.map(project => (
-              <motion.div
+              <m.div
                 key={project.id}
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -173,10 +176,10 @@ export default function Portfolio() {
                 transition={{ duration: 0.3 }}
               >
                 <ProjectCard project={project} onClick={openLightbox} />
-              </motion.div>
+              </m.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </m.div>
       </div>
 
       <LightboxModal project={lightboxProject} onClose={closeLightbox} />

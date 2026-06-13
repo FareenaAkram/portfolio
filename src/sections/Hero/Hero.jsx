@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import TypingAnimation from '../../components/ui/TypingAnimation';
 import Button from '../../components/common/Button';
@@ -33,44 +33,44 @@ export default function Hero() {
       <div className={styles.gridOverlay} aria-hidden="true" />
 
       <div className={styles.container}>
-        <motion.div
+        <m.div
           className={styles.content}
           variants={stagger(0.1)}
           initial="hidden"
           animate="visible"
         >
           {/* Text side */}
-          <motion.div className={styles.textSide} variants={slideLeft}>
-            <motion.span className={styles.greeting} variants={fadeUp}>
+          <m.div className={styles.textSide} variants={slideLeft}>
+            <m.span className={styles.greeting} variants={fadeUp}>
               Hello, I am
-            </motion.span>
+            </m.span>
 
-            <motion.h1 className={styles.name} variants={fadeUp}>
+            <m.h1 className={styles.name} variants={fadeUp}>
               Fareena Akram
-            </motion.h1>
+            </m.h1>
 
-            <motion.p className={styles.tagline} variants={fadeUp}>
+            <m.p className={styles.tagline} variants={fadeUp}>
               I am a Passionate{' '}
               <TypingAnimation phrases={TYPING_PHRASES} className={styles.typedText} />
-            </motion.p>
+            </m.p>
 
-            <motion.p className={styles.description} variants={fadeUp}>
+            <m.p className={styles.description} variants={fadeUp}>
               Frontend Developer with 4+ years of experience building responsive, accessible,
               and performance-focused web interfaces. Currently at IBM — delivering front-end
               solutions for enterprise banking applications.
-            </motion.p>
+            </m.p>
 
-            <motion.div className={styles.ctaBar} variants={fadeUp}>
+            <m.div className={styles.ctaBar} variants={fadeUp}>
               <Button href="#contactus" onClick={scrollToContact} variant="primary">
                 Contact Me
               </Button>
               <Button href="#work" onClick={scrollToWork} variant="outline">
                 View Portfolio
               </Button>
-            </motion.div>
+            </m.div>
 
             {/* Scroll hint */}
-            <motion.div
+            <m.div
               className={styles.scrollHint}
               variants={fadeUp}
               animate={{ y: [0, 6, 0] }}
@@ -78,46 +78,51 @@ export default function Hero() {
             >
               <ArrowDown size={14} />
               <span>Scroll to explore</span>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
 
           {/* Visual side */}
-          <motion.div className={styles.visualSide} variants={slideRight}>
+          <m.div className={styles.visualSide} variants={slideRight}>
             <div className={styles.videoCard}>
               <div className={styles.videoGlow} aria-hidden="true" />
               <img
                 src={img('images/Me.png')}
                 alt="Fareena Akram"
                 className={styles.heroPhoto}
+                fetchPriority="high"
+                loading="eager"
+                decoding="sync"
+                width="420"
+                height="525"
               />
               {/* Floating badges */}
-              <motion.div
+              <m.div
                 className={`${styles.floatBadge} ${styles.floatBadge1}`}
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
               >
                 <span className={styles.badgeDot} />
                 @ IBM
-              </motion.div>
-              <motion.div
+              </m.div>
+              <m.div
                 className={`${styles.floatBadge} ${styles.floatBadge2}`}
                 animate={{ y: [0, 6, 0] }}
                 transition={{ repeat: Infinity, duration: 3.5, ease: 'easeInOut', delay: 0.5 }}
               >
                 <span className={styles.badgeDot} />
                 React · Angular
-              </motion.div>
-              <motion.div
+              </m.div>
+              <m.div
                 className={`${styles.floatBadge} ${styles.floatBadge3}`}
                 animate={{ y: [0, -4, 0] }}
                 transition={{ repeat: Infinity, duration: 2.8, ease: 'easeInOut', delay: 1 }}
               >
                 <span className={styles.badgeDot} />
                 4+ Years
-              </motion.div>
+              </m.div>
             </div>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   );

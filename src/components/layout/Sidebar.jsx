@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import Navigation from './Navigation';
 import ThemeToggle from '../ui/ThemeToggle';
 import TypingAnimation from '../ui/TypingAnimation';
@@ -17,7 +17,7 @@ const TYPING_PHRASES = [
 export default function Sidebar({ menuOpen, onClose }) {
   return (
     <AnimatePresence>
-      <motion.aside
+      <m.aside
         className={`${styles.sidebar} ${menuOpen ? styles.open : ''}`}
         initial={false}
       >
@@ -32,6 +32,10 @@ export default function Sidebar({ menuOpen, onClose }) {
                 src={img('images/Me.png')}
                 alt="Fareena Akram"
                 className={styles.avatar}
+                loading="lazy"
+                decoding="async"
+                width="80"
+                height="80"
               />
             </div>
             <h2 className={styles.name}>Fareena</h2>
@@ -57,7 +61,7 @@ export default function Sidebar({ menuOpen, onClose }) {
             </a>
           </div>
         </div>
-      </motion.aside>
+      </m.aside>
     </AnimatePresence>
   );
 }

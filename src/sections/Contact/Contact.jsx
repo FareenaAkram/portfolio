@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { Mail, CheckCircle, AlertCircle, Send } from 'lucide-react';
 import SectionTitle from '../../components/common/SectionTitle';
 import Button from '../../components/common/Button';
@@ -77,7 +77,7 @@ export default function Contact() {
 
         <div className={styles.layout}>
           {/* ── Info panel ──────────────────────────────────────────────────── */}
-          <motion.div
+          <m.div
             className={styles.infoPanel}
             variants={slideLeft}
             initial="hidden"
@@ -125,10 +125,10 @@ export default function Contact() {
                 LinkedIn
               </a>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* ── Form ────────────────────────────────────────────────────────── */}
-          <motion.div
+          <m.div
             className={styles.formWrap}
             variants={slideRight}
             initial="hidden"
@@ -164,7 +164,7 @@ export default function Contact() {
             {/* Status feedback */}
             <AnimatePresence>
               {status === 'success' && (
-                <motion.div
+                <m.div
                   className={`${styles.alert} ${styles.alertSuccess}`}
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -172,10 +172,10 @@ export default function Contact() {
                 >
                   <CheckCircle size={18} />
                   <span>Message sent! I'll get back to you soon.</span>
-                </motion.div>
+                </m.div>
               )}
               {status === 'error' && (
-                <motion.div
+                <m.div
                   className={`${styles.alert} ${styles.alertError}`}
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -183,10 +183,10 @@ export default function Contact() {
                 >
                   <AlertCircle size={18} />
                   <span>Something went wrong. Please try again.</span>
-                </motion.div>
+                </m.div>
               )}
             </AnimatePresence>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

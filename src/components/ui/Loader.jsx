@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import styles from './Loader.module.css';
 
 export default function Loader({ onDone }) {
@@ -20,7 +20,7 @@ export default function Loader({ onDone }) {
   }, [onDone]);
 
   return (
-    <motion.div
+    <m.div
       className={styles.overlay}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, ease: 'easeInOut' }}
@@ -31,7 +31,7 @@ export default function Loader({ onDone }) {
         </div>
         <div className={styles.trackWrap}>
           <div className={styles.track}>
-            <motion.div
+            <m.div
               className={styles.fill}
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
@@ -41,6 +41,6 @@ export default function Loader({ onDone }) {
           <span className={styles.percent}>{progress}%</span>
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import styles from './ThemeToggle.module.css';
@@ -14,7 +14,7 @@ export default function ThemeToggle() {
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDark ? 'Light mode' : 'Dark mode'}
     >
-      <motion.span
+      <m.span
         key={theme}
         initial={{ opacity: 0, rotate: -45 }}
         animate={{ opacity: 1, rotate: 0 }}
@@ -23,7 +23,7 @@ export default function ThemeToggle() {
         className={styles.icon}
       >
         {isDark ? <Sun size={16} /> : <Moon size={16} />}
-      </motion.span>
+      </m.span>
     </button>
   );
 }

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import styles from './Button.module.css';
 
 export default function Button({
@@ -13,7 +13,7 @@ export default function Button({
 
   if (href) {
     return (
-      <motion.a
+      <m.a
         href={href}
         className={cls}
         whileHover={{ y: -2 }}
@@ -21,12 +21,12 @@ export default function Button({
         {...props}
       >
         {children}
-      </motion.a>
+      </m.a>
     );
   }
 
   return (
-    <motion.button
+    <m.button
       onClick={onClick}
       className={cls}
       whileHover={{ y: -2 }}
@@ -34,6 +34,6 @@ export default function Button({
       {...props}
     >
       {children}
-    </motion.button>
+    </m.button>
   );
 }

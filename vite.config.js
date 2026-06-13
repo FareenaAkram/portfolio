@@ -15,4 +15,17 @@ export default defineConfig(({ command }) => ({
   server: {
     port: 3000,
   },
+  build: {
+    target: 'esnext',
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('framer-motion')) return 'framer-motion';
+          if (id.includes('react-router') || id.includes('@remix-run')) return 'router';
+          if (id.includes('lucide-react')) return 'icons';
+          if (id.includes('node_modules')) return 'vendor';
+        },
+      },
+    },
+  },
 }));
