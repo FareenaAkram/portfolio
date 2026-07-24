@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my projects, skills, and experience as a Frontend Engineer.
 
-**Live Demo:** _add your deployed link here (Vercel/Netlify)_
+**Live Demo:** (https://fareenaakram.github.io/portfolio/)
 
 ## Built With
 
