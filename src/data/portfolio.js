@@ -3,8 +3,8 @@ import { img } from '../utils/assets';
 export const FILTERS = [
   { id: '*', label: 'All' },
   { id: 'react', label: 'React' },
-  { id: 'angular', label: 'html' },
-  { id: 'angular', label: 'wordpress' },
+  { id: 'html', label: 'HTML' },
+  { id: 'wordpress', label: 'Wordpress' },
   { id: 'ai', label: 'AI' },
 ];
 
