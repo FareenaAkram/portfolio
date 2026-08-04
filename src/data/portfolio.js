@@ -3,7 +3,7 @@ import { img } from '../utils/assets';
 export const FILTERS = [
   { id: '*', label: 'All' },
   { id: 'react', label: 'React' },
-  { id: 'angular', label: 'HTML' },
+  { id: 'angular', label: 'html' },
   { id: 'angular', label: 'wordpress' },
   { id: 'ai', label: 'AI' },
 ];
