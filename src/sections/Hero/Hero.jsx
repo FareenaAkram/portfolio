@@ -62,7 +62,7 @@ export default function Hero() {
                 Contact Me
               </Button>
               <Button href="#work" onClick={scrollToWork} variant="outline">
-                View Portfolio
+                View My Work
               </Button>
             </m.div>
 
