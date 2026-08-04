@@ -9,9 +9,8 @@ import styles from './Hero.module.css';
 const TYPING_PHRASES = [
   'Frontend Engineer',
   'React Developer',
-  'Angular Specialist',
   'IBM Consultant',
-  'WordPress Expert',
+  'Elementor Expert',
 ];
 
 export default function Hero() {
@@ -50,14 +49,12 @@ export default function Hero() {
             </m.h1>
 
             <m.p className={styles.tagline} variants={fadeUp}>
-              I am a Passionate{' '}
-              <TypingAnimation phrases={TYPING_PHRASES} className={styles.typedText} />
+             Frontend Engineer building AI-powered web applications.
+              {/* <TypingAnimation phrases={TYPING_PHRASES} className={styles.typedText} /> */}
             </m.p>
 
             <m.p className={styles.description} variants={fadeUp}>
-              Frontend Developer with 4+ years of experience building responsive, accessible,
-              and performance-focused web interfaces. Currently at IBM — delivering front-end
-              solutions for enterprise banking applications.
+             4 years of experience building React, Angular, and TypeScript applications across banking and healthcare. Currently exploring AI agents, Python, Flask, and AWS.
             </m.p>
 
             <m.div className={styles.ctaBar} variants={fadeUp}>
